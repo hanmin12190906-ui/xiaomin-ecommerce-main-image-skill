@@ -23,6 +23,12 @@ For `gpt-image-2`:
 - Use `1024x1536` or `1536x2048` for vertical first images.
 - Do not request transparent background with `gpt-image-2`.
 
+If brand font guidance applies:
+- Read `brand-fonts.md`.
+- Name the intended brand-safe font style in the prompt.
+- Ask generation models to avoid random decorative Chinese glyphs.
+- For final text-heavy main images, prefer local text replacement with approved installed fonts after generation.
+
 ## Prompt Skeleton
 
 ```text
@@ -54,6 +60,7 @@ Required readable text:
 
 Copy layout:
 Use one clear headline and up to three badges. Keep text large, readable, correctly spelled, and not cropped.
+If a brand-approved font library is available, use the approved font family for all major copy. Do not let the model invent ornamental Chinese lettering.
 
 Style:
 [platform-appropriate style], commercial product photography, clean hierarchy, no cheap template feeling.

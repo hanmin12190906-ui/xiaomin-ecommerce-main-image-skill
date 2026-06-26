@@ -1,6 +1,6 @@
 ---
 name: xiaomin-ecommerce-main-image-skill
-description: Use when designing, planning, generating, or critiquing Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, copy compression, layout rules, gpt-image-2/image generation prompts, Cowart annotation iteration, and ecommerce compliance checks.
+description: Use when designing, planning, generating, or critiquing Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, brand font selection, copy compression, layout rules, gpt-image-2/image generation prompts, Cowart annotation iteration, and ecommerce compliance checks.
 ---
 
 # 小敏电商主图设计 Skill
@@ -38,11 +38,13 @@ Confirmation rule: before generating, editing, or composing a main image from a 
 3. **Adapt to platform**
    - Read `references/platform-style.md` when the user names a platform or channel.
    - If no platform is named, use a balanced Tmall/JD-style brand ecommerce look: clean, product-dominant, moderate copy, no loud low-end promotion.
+   - If the product belongs to Mars/Mars Petcare brands or the user mentions brand fonts, read `references/brand-fonts.md` and use approved font families or approved fallbacks. Do not let AI image generation invent decorative Chinese glyph styles for key copy.
 
 4. **Compress copy**
    - Main image copy must be short and legible.
    - Prefer 1 main headline + 1 subtitle + 1-3 badges.
    - Keep exact user-provided brand/product/spec text unchanged.
+   - For final commercial text, prefer deterministic local text composition with an approved font when possible; use AI-rendered text only for drafts or when local font composition is unavailable.
    - Avoid unsupported absolute claims and sensitive claims.
    - Do not place internal labels such as `主图优化`, `设计稿`, `视觉优化`, `方案`, `示意`, or tool/process descriptions inside the image.
    - For activity benefit main images, separate copy into zones: event/campaign, hero claim, offer/price/gift. Do not blend all information into one dense middle area.
