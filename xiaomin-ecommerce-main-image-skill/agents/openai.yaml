@@ -1,7 +1,7 @@
 interface:
   display_name: "小敏电商主图设计"
-  short_description: "先确认产品、价格、机制与利益点，再生成高点击电商主图"
+  short_description: "先确认产品、价格、机制与利益点，再用 image2 或 Lovart 生成高点击电商主图"
   brand_color: "#D71920"
-  default_prompt: "Use $xiaomin-ecommerce-main-image-skill to organize my product, price, mechanism, and benefit points before generating an ecommerce main image."
+  default_prompt: "Use $xiaomin-ecommerce-main-image-skill to organize my product, price, mechanism, and benefit points, then choose image2 or Lovart/OpenClaw to generate an ecommerce main image."
 policy:
   allow_implicit_invocation: true
