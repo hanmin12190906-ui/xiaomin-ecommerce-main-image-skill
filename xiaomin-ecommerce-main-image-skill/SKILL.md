@@ -1,6 +1,6 @@
 ---
 name: xiaomin-ecommerce-main-image-skill
-description: Use when designing, planning, generating, or critiquing Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, copy compression, layout rules, gpt-image-2/image generation prompts, Lovart/OpenClaw generation, Cowart annotation iteration, and ecommerce compliance checks.
+description: Use when designing, planning, generating, or critiquing Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, copy compression, layout rules, gpt-image-2/image generation prompts, Cowart annotation iteration, and ecommerce compliance checks.
 ---
 
 # 小敏电商主图设计 Skill
@@ -63,12 +63,7 @@ Confirmation rule: before generating, editing, or composing a main image from a 
      - composition
      - copy text
      - negative constraints
-   - Choose a generation backend:
-     - Use `gpt-image-2` when SKU/package fidelity, exact product preservation, or text control is the highest priority.
-     - Use Lovart/OpenClaw when the user asks for Lovart, when a stronger commercial-photography scene is needed, or when the output needs art-direction polish beyond direct product editing.
-     - For Lovart/OpenClaw generation, read `references/lovart-backend.md` and follow its local-state, upload, chat, download, and quality-gate workflow.
    - For `gpt-image-2`, prefer product-image edit/composition when a reference product image is supplied. Use generation only when no product image exists.
-   - For Lovart, upload reference images first, state their roles in the prompt, and require the same confirmation/compliance constraints used for `gpt-image-2`.
 
 7. **Quality and compliance check**
    - Read `references/compliance-check.md`.
