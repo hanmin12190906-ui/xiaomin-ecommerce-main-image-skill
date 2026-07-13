@@ -1,6 +1,6 @@
 ---
 name: xiaomin-ecommerce-main-image-skill
-description: Use when designing, planning, generating, or critiquing Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, brand font selection, copy compression, layout rules, gpt-image-2/image generation prompts, Cowart annotation iteration, and ecommerce compliance checks.
+description: Use when designing, planning, generating, critiquing, or preparing layered handoff files for Chinese ecommerce main images, product first images, search listing images, white-background product images, scene main images, SKU hero images, click-through product creatives, marketplace thumbnails, PSD-ready main image files, or platform-specific main images for Taobao, Tmall, JD, Douyin, Pinduoduo, Xiaohongshu, Amazon, Shopee, Lazada, and similar stores. Handles product-image analysis, main-image type selection, brand font selection, copy compression, layout rules, gpt-image-2/image generation prompts, PSD layer output workflow, Cowart annotation iteration, and ecommerce compliance checks.
 ---
 
 # 小敏电商主图设计 Skill
@@ -73,7 +73,13 @@ Confirmation rule: before generating, editing, or composing a main image from a 
    - Before delivering any generated or composited image, explicitly reject it if it looks like a poster, screenshot collage, low-end template, or internal concept board.
    - If the image fails the check, critique it first and either regenerate or provide a better prompt. Do not present a failed image as acceptable.
 
-8. **Cowart iteration**
+8. **PSD layered output**
+   - When the user asks for PSD, layered files, editable source files, layer split, Photoshop handoff, or design source output, read `references/psd-layer-output.md`.
+   - Treat PSD output as a production handoff step after the main image concept/layout is confirmed.
+   - Separate background, product, texture/props, text, badges, promotion modules, shadows, highlights, and guides into named layers or layer groups.
+   - Keep commercial text editable whenever possible. If true editable PSD text layers cannot be produced in the current environment, output a PSD-ready package with transparent PNG layer assets, a flattened preview, and a layer manifest JSON/Markdown that records exact text, font, color, size, and position.
+
+9. **Cowart iteration**
    - When Cowart is available, insert generated main images onto the canvas for review.
    - Treat Cowart annotations as edit briefs. Keep originals unless the user explicitly asks to replace them.
 
@@ -89,6 +95,7 @@ Confirmation rule: before generating, editing, or composing a main image from a 
 
 - If the user asks to **design / plan**: first output the confirmation card, then after confirmation output product facts, chosen type, copy, layout, and final prompt.
 - If the user asks to **直接生成 / 继续生成**: for a new unconfirmed brief, first output the confirmation card instead of generating. After confirmation, generate or edit the image when a generation tool/API is available, inspect it against the quality gate, and place it in Cowart if relevant. If it fails, do not frame it as final; explain the failure and improve it.
+- If the user asks for **PSD / 分层文件 / 可编辑源文件**: complete the same confirmation and quality flow first, then output the PSD layered handoff according to `references/psd-layer-output.md`.
 - If the user asks to **复盘 / 为什么丑 / 改主图**: critique against `references/compliance-check.md`, then propose specific fixes.
 
 ## Do Not
