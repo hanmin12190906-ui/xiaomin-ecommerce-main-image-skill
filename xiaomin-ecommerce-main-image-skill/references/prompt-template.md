@@ -37,6 +37,9 @@ Use the input image as product reference. Create a premium Chinese ecommerce mai
 Main image type:
 [white-background / scene / selling-point / texture / comparison / bundle / campaign]
 
+Visual template:
+[product-texture / pet-scene / brand-trust / service-mechanism / campaign-conversion / white-shelf / lifestyle-editorial]
+
 Platform and ratio:
 [platform], [1:1 / 3:4 / 4:5 / 2:3]
 

@@ -32,8 +32,11 @@ Confirmation rule: before generating, editing, or composing a main image from a 
 2. **Choose main image type**
    - Read `references/main-image-types.md`.
    - Select one or more: white-background main image, scene main image, selling-point main image, texture main image, comparison main image, bundle/SKU main image, campaign/promotion main image, price/coupon main image, gift/member main image.
+   - Read `references/template-selection.md` and choose a visual template archetype such as product-texture, pet-scene, brand-trust, service-mechanism, or campaign-conversion.
+   - Treat main image type as the commercial purpose, and visual template as the layout/execution style. They may be combined, for example `selling-point + pet-scene + brand-trust`.
    - If the user says only “做主图”, default to 3 options: clean search main image, scene click-through main image, selling-point main image.
    - If the user provides price, coupon, discount, event time, gift, membership, or shopping-festival context, read `references/promo-layouts.md` and choose an activity benefit archetype.
+   - If the user provides a preferred example template, analyze it and match the closest visual template without copying unconfirmed claims, prices, mechanisms, or brand assets.
 
 3. **Adapt to platform**
    - Read `references/platform-style.md` when the user names a platform or channel.
